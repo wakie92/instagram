@@ -1,0 +1,20 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 108px;
+  .Rectangle3 {
+    width: 231px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 1px #aaaaaa;
+    background-color: #ffffff;
+    margin-bottom: 16px;
+    padding-left: 16px;
+  }
+}
+input {
+  padding: unset;
+}
+

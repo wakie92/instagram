@@ -1,0 +1,11 @@
+.Bitmap {
+  display:  flex;
+  justify-content:  center;
+  padding-top : 116px;
+  // margin-bottom : 236px;
+  img {
+    width: 94px;
+    height: 27px;
+    object-fit: contain;
+  }
+}

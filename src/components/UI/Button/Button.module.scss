@@ -1,0 +1,41 @@
+button {
+  width: 247px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding : unset;
+  border: unset;
+  // margin-bottom: 16px;
+}
+
+p {
+  height: 16px;
+  width: 100%;
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+.EnterToLogin {
+  border: solid 1px #2c2c2c;
+  color: #2c2c2c;
+}
+.EnterToRegister {
+  border: solid 1px #4a90e2;
+
+  color: #4a90e2;
+}
+.Login {
+  background-color: #2c2c2c;
+  margin-top : 8px; 
+  color : #ffffff;
+}
+.Register{
+  background-color : #4a90e2;
+  color : #ffffff;
+  margin-top : 8px; 
+}
