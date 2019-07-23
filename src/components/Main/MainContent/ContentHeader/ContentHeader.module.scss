@@ -1,0 +1,45 @@
+
+.ContentHeader{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 17px;
+  margin-bottom: 8px;
+  align-items: center;
+  img {
+    width: 38px;
+    height: 38px;
+
+  }
+  .ContentInfo {
+    width: 100%;
+    margin-left: 12px;
+    p {
+      height: 18px;
+      font-family: AppleSDGothicNeo;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.29;
+      letter-spacing: normal;
+      text-align: left;
+      color: #2c2c2c;
+      margin: unset;
+    }
+  }
+  .OvalBox{
+    width : 27px;
+    height: 5px;
+    display: flex;
+    justify-content: space-between;
+    .Oval{
+      width : 5px;
+      height: 5px;
+      border-radius: 30px;
+      background-color: #aaaaaa;
+      margin: unset;
+    }
+  }
+
+}
