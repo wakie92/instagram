@@ -1,13 +1,13 @@
 import React from 'react'
 import classes from './ContentHeader.module.scss'
-import AvatarImg from './4ff36bf59e.svg'
+import {Avatar, Pin} from 'libs/images';
 const ContentHeader = () => {
   return(
     <div className = {classes.ContentHeader}>
-      <img alt="avatar" src = {AvatarImg}/>
+      <img alt="avatar" src = {Avatar}/>
       <div className = {classes.ContentInfo}>
         <p>sarahannloreth</p>
-        <p>Kauai, Hawaii</p>
+        <p><img alt = "pin" src = {Pin}/> Kauai, Hawaii</p>
       </div>
       <div className = {classes.OvalBox}>
         <div className = {classes.Oval}/>
