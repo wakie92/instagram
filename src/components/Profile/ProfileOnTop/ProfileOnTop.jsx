@@ -5,7 +5,7 @@ const ProfileOnTop = () => {
   return(
     <div className = {classes.ProfileOnTop}>
       <img alt = "Back" src = {Back} style = {{marginLeft : '16px'}}/>
-      <span>Reply</span>
+      <span>Profile</span>
       <span src = {Back} style = {{color :'#4a90e2', marginRight : '16px'}}>Done</span>
     </div>
   )
