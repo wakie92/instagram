@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './Layout.module.scss';
 
-const Layout = ({children}) => {
+const Layout = ({children, bg}) => {
   return (
-    <div className = {classes.Rectangle}>
+    <div className = {[classes.Rectangle, classes[bg]].join(' ')}>
       {children}
     </div>
   )

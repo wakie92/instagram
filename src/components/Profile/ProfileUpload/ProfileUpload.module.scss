@@ -1,0 +1,14 @@
+.ProfileUpload {
+  height: 108px;
+  display:  flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .ProfileImgBox {
+    width :38px;
+    height: 38px;
+    border-radius: 50%;
+    border : 1px solid #e0e0e0;
+    margin: 8px;
+  }
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import { LogoImg } from "libs/images";
 import classes from "./Logo.module.scss";
-const Logo = ({ sty }) => {
+const Logo = ({ LogoType }) => {
   return (
-    <div className={classes.Bitmap} style={sty}>
+    <div className={[classes.Bitmap, classes[LogoType]].join(' ')}>
       <img alt="logo" src={LogoImg} />
     </div>
   );

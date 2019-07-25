@@ -9,3 +9,5 @@ export { default as Pin } from './pin.png';
 export { default as Profile } from './profile.png';
 export { default as Sample } from './sample.jpeg';
 export { default as Search } from './search.png';
+export { default as HashIcon } from './hash.svg';
+export { default as Back } from './back.svg';

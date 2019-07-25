@@ -1,0 +1,37 @@
+.ReplyBox {
+  display: flex;
+  padding: 16px 0;
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  border-bottom : solid 1px #ebebeb;
+  .ReplyAvatar {
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    margin: 0 16px;
+    background-color: #e0e0e0;
+  }
+  .Reply {
+    width: calc(100% - 70px);
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    span {
+
+      color: #2c2c2c;
+    }
+    text {
+      font-size : 13px;
+      text-align: left;
+      color: #aaaaaa;
+    }
+  }
+}
+.ReReBox {
+  margin-left: 54px;
+  .ReRe {
+    width : calc(100% - 140px);
+  }
+}

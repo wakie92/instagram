@@ -1,0 +1,11 @@
+.UploadOnTop {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  span {
+    font-size: 16px;
+  }
+}

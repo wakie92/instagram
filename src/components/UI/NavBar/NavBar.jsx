@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./MainBottom.module.scss";
+import classes from "./NavBar.module.scss";
 import { Home, Search, AddPhoto, Activity, Profile } from 'libs/images';
 
 const MainBottom = () => {
