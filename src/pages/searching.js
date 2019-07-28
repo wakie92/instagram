@@ -4,12 +4,12 @@ import NavBar from 'components/UI/NavBar';
 import Searching from '../components/Searching';
 import Logo from '../components/UI/Logo';
 
-const searching = () => {
+const searching = ({match}) => {
   return(
     <Layout bg = "bgGray">
       <Searching
         Logo = {<Logo LogoType = "TopPosition"/>}
-        NavBar = {<NavBar/>}
+        NavBar = {<NavBar url = {match.url}/>}
       />
     </Layout>
   )

@@ -2,12 +2,13 @@ import React from 'react';
 import UploadOnTop from './UploadOnTop';
 import Button from 'components/UI/Button'
 import UploadText from './UploadText';
+import UploadImg from './UploadImg';
 const Upload = ({NavBar}) => {
   return (
     <>
       <form>
         <UploadOnTop/>
-        <Button btnType = "Upload" value = "+ Add Image"/>
+        <UploadImg/>
         <UploadText textType = "description"/>
         <UploadText textType = "tag"/>
         {NavBar}

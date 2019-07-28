@@ -1,0 +1,35 @@
+.ImageUpload {
+  label {
+    display: flex;
+    justify-content: center;
+    div {
+      width : 351px;
+      height: 38px;
+      border-radius: 6px;
+      background-color: #6e8f9c;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      margin-top : 8px ;
+      p {
+        margin : unset;
+      }
+    }
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .ImgBox {
+    display: flex;
+    margin : 8px 12px;
+    img {
+      width :60px;
+      height: 60px;
+    }
+    .Xmark {
+      width: 13px;
+      height: 13px;
+      margin : 0 8px;
+    }
+  }
+}

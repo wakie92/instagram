@@ -4,11 +4,11 @@ import Reply from 'components/Reply';
 import Logo from 'components/UI/Logo';
 import NavBar from 'components/UI/NavBar'
 
-const reply = () => {
+const reply = ({match}) => {
   return (
     <Layout bg = "bgGray">
       <Reply
-        NavBar = {<NavBar/>}
+        NavBar = {<NavBar url = {match.url}/>}
       />
     </Layout>
   )

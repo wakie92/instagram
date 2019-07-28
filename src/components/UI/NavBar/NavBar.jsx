@@ -1,15 +1,17 @@
 import React from "react";
 import classes from "./NavBar.module.scss";
-import { Home, Search, AddPhoto, Activity, Profile } from 'libs/images';
+import { Home, Search, AddPhoto, Activity, Profile, APhoto, ASearch, AProfile, AHome } from 'libs/images';
+import { NavLink } from 'react-router-dom';
 
-const MainBottom = () => {
+const MainBottom = ({url}) => {
+//좀더효율적인방법 생각
   return (
     <div className={classes.Bar}>
-      <img alt="main" src = {Home} />
-      <img alt="search" src = {Search}/>
-      <img alt="AddPhoto" src = {AddPhoto}/>
-      <img alt="activity" src = {Activity}/>
-      <img alt="profile" src = {Profile}/>
+      <NavLink exact to = '/main'><img alt="main" src = {url === '/main' ?  Home : AHome } /></NavLink>
+      <NavLink exact to = '/search'><img alt="search" src = {url === '/serach' ?  ASearch :Search }/></NavLink>
+      <NavLink exact to = '/upload'><img alt="AddPhoto" src = {url === '/upload' ?  APhoto : AddPhoto }/> </NavLink>
+      <NavLink exact to = '/reply'><img alt="activity" src = {url === '/reply' ?  Activity : Activity }/> </NavLink>
+      <NavLink exact to = '/profile'><img alt="profile" src = {url === '/profile' ? AProfile : Profile} /> </NavLink>
     </div>
   );
 };
