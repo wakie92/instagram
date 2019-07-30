@@ -14,7 +14,10 @@
     padding-left: 16px;
   }
 }
-input {
-  padding: unset;
+form {
+  display: flex;
+  flex-direction: column;
+  input {
+    padding: unset;
+  }
 }
-

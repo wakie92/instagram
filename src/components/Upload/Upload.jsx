@@ -1,6 +1,5 @@
 import React from 'react';
 import UploadOnTop from './UploadOnTop';
-import Button from 'components/UI/Button'
 import UploadText from './UploadText';
 import UploadImg from './UploadImg';
 const Upload = ({NavBar}) => {

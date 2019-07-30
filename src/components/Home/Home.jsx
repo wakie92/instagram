@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useEffect, useState }  from "react";
 import Logo from "../UI/Logo";
 import classes from './Home.module.scss';
-const Home = ({ children , matchData}) => {
-  console.log(matchData);
+
+const Home = ({ children , matchData, history}) => {
+  const [isLogged, setIsLogged] = useState('');
   let styled = matchData==='/' ? {height : `100px`} : null;
-  console.log(styled);
+  useEffect(() => {
+    const isLogged = sessionStorage.getItem('userData')
+    setIsLogged(isLogged);
+    if(isLogged) {
+      history.push('/main');
+    }
+  },[])
   return (
     <>
-      <Logo />
-      <div className = {classes.Container} style = {styled}>
-        {children}
-      </div>
+    {
+      isLogged === null
+      ? 
+      <>
+        <Logo />
+        <div className = {classes.Container} style = {styled}>
+          {children}
+        </div>
+      </> 
+    : null
+      
+    }
     </>
   );
 };

@@ -7,7 +7,7 @@ class App extends Component {
       <>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/login" component={Login} props = {this.props}/>
           <Route exact path="/register" component={Register} />
           <Route exact path="/main" component={Main} />
           <Route exact path="/search" component={Searching} />

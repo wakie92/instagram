@@ -1,16 +1,18 @@
 import React from "react";
-import Register from "components/Home/Register";
+import LoginContainer from "containers/LoginContainer";
 import Layout from "components/UI/Layout";
 import Home from "../components/Home/Home";
 
-const register = () => {
+const login = ({history}) => {
+ 
   return (
     <Layout>
       <Home>
-        <Register />
+        <LoginContainer history= {history}/>
       </Home>
     </Layout>
   );
 };
 
-export default register;
+export default login;
+ 
