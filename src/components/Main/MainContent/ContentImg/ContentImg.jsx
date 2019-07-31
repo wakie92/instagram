@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./ContentImg.module.scss";
-import { Sample } from "libs/images";
 
-const ContentImg = () => {
-  return <img className = {classes.Image} alt="img" src={Sample} />;
+const ContentImg = ({uri_json}) => {
+  const data = JSON.parse(uri_json)
+  return <img className = {classes.Image} alt="img" src={data.location} />;
 };
 export default ContentImg;

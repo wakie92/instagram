@@ -1,17 +1,19 @@
 import React from "react";
 import classes from "./ContentBox.module.scss";
 
-const ContentBox = () => {
+const ContentBox = ({desc, tag_string, pid_user}) => {
   return (
     <div className={classes.ContentBox}>
-      <span>sarahannloreth</span><br/>
+      <span>{pid_user}</span><br/>
       <div className={classes.Content}>
-        the edge of New Zealand! we’re so excited! i will remember this amazing
-        view forever.
+        {desc}
       </div>
-      <p className={classes.HashTag}>
-        #newzealand #sight #trip #family #friends #yolo
-      </p>
+        {tag_string === 'none' 
+          ? null 
+          : <p className={classes.HashTag}>
+              {tag_string} 
+            </p>
+        }
       <p>View all comments</p>
     </div>
   );

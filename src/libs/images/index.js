@@ -16,3 +16,4 @@ export { default as APhoto } from "./Aphoto.svg";
 export { default as AProfile } from "./Aprofile.svg";
 export { default as ASearch } from "./Asearch.svg";
 export { default as AHome } from "./Ahome.svg";
+export { default as Unlike } from "./unlike.svg";
