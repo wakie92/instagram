@@ -3,4 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   height: calc(100% -  100px);
+  .Replies {
+    height: calc(100% - 40px);;
+    overflow: scroll;
+  }
 }

@@ -6,57 +6,39 @@ import ReplyInput from "./ReplyInput";
 
 
 const RepliesBox = ({postCmt}) => {
-  const cmtData = postCmt.map((cmt) => {
-    return (
-      <Replies
-        key = {cmt.pid_post_cmt}
-        id = {<span>{cmt.user_name}</span>}
-        comment = {
-          <div>{cmt.body}</div>
-        }
-      />
-    )
-  })
+  console.log(postCmt);
+  let cmtData = null;
+  if(!postCmt) {
+    return (<div>잘못된 경로</div>);
+  } else if(postCmt.code) {
+    return null
+  } else {
+    cmtData = postCmt.map((cmt) => {
+      return (
+        <Replies
+          key = {cmt.pid_post_cmt}
+          id = {<span>{cmt.user_name}</span>}
+          comment = {
+            <div>{cmt.body}</div>
+          }
+        />
+      )
+    }) 
+  }
   return (
-    {cmtData}
+    cmtData
   )
 }
 
-
-
-
-const Reply = ({ NavBar, postCmt }) => {
-
-
+const Reply = ({ NavBar, postCmt ,handleReply, handleInsert}) => {
   return (
     <>
       <ReplyOnTop />
       <div className = {classes.Container}>
-        <div>
+        <div className = {classes.Replies}>
           <RepliesBox postCmt = {postCmt}/>
-          <Replies
-            id={<span>Justin</span>}
-            comment={
-              <text>
-                Our curated library of royalty-free music gives you the polished
-                feel of the big production houses. All our tracks are exclusive
-                and copyright clear.
-              </text>
-            }
-          />
-          <Replies
-            id={<span>Justin</span>}
-            comment={
-              <text>
-                Our curated library of royalty-free music gives you the polished
-                feel of the big production houses. All our tracks are exclusive
-                and copyright clear.
-              </text>
-            }
-            ReOfReply={true}
-          />
         </div>
-        <ReplyInput />
+        <ReplyInput handleReply = {handleReply} handleInsert = {handleInsert}/>
       </div>
       {NavBar}
     </>

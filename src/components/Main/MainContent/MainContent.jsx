@@ -7,11 +7,11 @@ import ContentBoxContainer from "containers/ContentBoxContainer";
 
 const MainContent = ({
   desc,
-  key,
   pid_user,
   pid_post,
   tag_string,
-  uri_json
+  uri_json,
+  history
 }) => {
   return (
     <div className={classes.ContentBox} key={pid_post}>
@@ -23,6 +23,7 @@ const MainContent = ({
         pid_user={pid_user}
         tag_string={tag_string}
         desc={desc}
+        history = {history}
       />
     </div>
   );
