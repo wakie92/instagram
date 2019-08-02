@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import LoginInput from 'components/Home/LoginInput';
-import FireAuthUser from "../api/FireAuthUser";
+import FireAuthUser from "api/FireAuthUser";
 import {
   PROJECT_NAME,
   SERVER_URL
-} from "../common/Constants";
+} from "common/Constants";
 
 class LoginContainer extends Component {
    userManager = new FireAuthUser(

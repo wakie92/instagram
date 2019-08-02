@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Main from 'components/Main';
 import NavBar from 'components/UI/NavBar';
 import Logo from 'components/UI/Logo';
-import { storageAvailable, getItem } from '../common/StorageUtils';
-import Fetch from '../common/Fetch';
+import { storageAvailable, getItem } from 'common/StorageUtils';
+import Fetch from 'common/Fetch';
 
 class MainContainer extends Component {
 

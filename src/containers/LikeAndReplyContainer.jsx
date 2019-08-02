@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import LikeAndReply from "../components/Main/MainContent/LikeAndReply";
-import Fetch from "../common/Fetch";
-import { getItem } from "../common/StorageUtils";
+import LikeAndReply from "components/Main/MainContent/LikeAndReply";
+import Fetch from "common/Fetch";
+import { getItem } from "common/StorageUtils";
 
 const api = getItem("RestAPI");
 const userId = getItem("userData");
@@ -11,6 +11,7 @@ class LikeAndReplyContainer extends Component {
   state = {
     idLike : null
   }
+  
   handleDisLike = async () => {
     const bodyData = {
       log_like: {
@@ -29,7 +30,6 @@ class LikeAndReplyContainer extends Component {
 
   handleLike = async () => {
     const { pid_target, pid_post} = this.props;
-    console.log(userId)
     const bodyData = {
       log_like: {
         pid_target: pid_target,
@@ -46,6 +46,7 @@ class LikeAndReplyContainer extends Component {
   }
   render() {
     const { handleDisLike, handleLike } = this;
+    
     return (
       <LikeAndReply
         handleLike={handleLike}

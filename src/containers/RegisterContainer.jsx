@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Register from '../components/Home/Register/Register';
-import FireAuthUser from "../api/FireAuthUser";
+import Register from 'components/Home/Register/Register';
+import FireAuthUser from "api/FireAuthUser";
 import {
   PROJECT_NAME,
   SERVER_URL
-} from "../common/Constants";
+} from "common/Constants";
 
 class RegisterContainer extends Component {
 
@@ -12,7 +12,7 @@ class RegisterContainer extends Component {
     SERVER_URL,
     PROJECT_NAME,
   )
-  
+
   state = {
     nickname : '',
     id : '',
