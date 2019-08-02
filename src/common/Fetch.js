@@ -27,7 +27,6 @@ const Fetch = (api, query = '', body = null) => {
     method: api.method,
     headers
   };
-
   if (body) {
     options.body = JSON.stringify(body);
   }

@@ -7,10 +7,12 @@ import {
 } from "../common/Constants";
 
 class RegisterContainer extends Component {
+
   userManager = new FireAuthUser(
     SERVER_URL,
     PROJECT_NAME,
   )
+  
   state = {
     nickname : '',
     id : '',

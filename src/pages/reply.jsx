@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from 'components/UI/Layout/Layout';
-import Reply from 'components/Reply';
 import NavBar from 'components/UI/NavBar'
+import ReplyContainer from '../containers/ReplyContainer';
 
 const reply = ({match}) => {
   return (
     <Layout bg = "bgGray">
-      <Reply
+      <ReplyContainer
         NavBar = {<NavBar url = {match.url}/>}
       />
     </Layout>

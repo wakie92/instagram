@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./ContentBox.module.scss";
 
-const ContentBox = ({desc, tag_string, pid_user}) => {
+const ContentBox = ({desc, tag_string, pid_user, getCmt}) => {
   return (
     <div className={classes.ContentBox}>
       <span>{pid_user}</span><br/>
@@ -14,7 +14,7 @@ const ContentBox = ({desc, tag_string, pid_user}) => {
               {tag_string} 
             </p>
         }
-      <p>View all comments</p>
+      <p onClick = {getCmt}>View all comments</p>
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import React, {useState, useRef} from 'react';
 import classes from './ProfileUpload.module.scss'
 import { getItem } from '../../../common/StorageUtils';
+import {updatePfImg} from 'api/axios-api';
 import Fetch from '../../../common/Fetch';
-import axios from '../../../axios-base';
+
 const ProfileUpload = () => {
 
   const [file, setFile] = useState()
@@ -10,20 +11,30 @@ const ProfileUpload = () => {
   const fileRef = useRef(null);
   const onChange =  () => {
     const file = fileRef.current.files[0];
-    const reader = new FileReader();
+    console.log(file);
+    let reader = new FileReader();
     //왜 밑에코드가 없으면 이미지가 생성이안되는지.
     const url = reader.readAsDataURL(file);
     const api = getItem('RestAPI');
     const userId = JSON.parse(sessionStorage.getItem('userData')).user.pid_user;
     console.log(userId);
+
+    const data = new FormData();
+    data.append('file', file)
+    data.append('filename', file.name)
+    console.log(data);
+
     reader.onloadend = async (e) => {
-      setFile(reader.result);
-      const query = `?uri_user=${file}&pid_user=${userId}`
+      await setFile(e.target.result);
+      let imgTarget =reader.result.split(',')[0]
+      console.log(reader.result)
+      const query = `?uri_user=${imgTarget}&pid_user=${userId}`
       const bodyData = {
-        uri_user : file,
+        uri_user : data,
         pid_user : userId
       }
-      await axios.put(`/user_update_userimg/?uri_user=${reader.result}&pid_user=${userId}`, bodyData )
+      // await updatePfImg(reader.result,userId);
+      await Fetch(api.user_update_userimg,query,bodyData)
     }
   }
   return (
