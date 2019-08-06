@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./ContentBox.module.scss";
-import { NavLink } from 'react-router-dom';
 
 const ContentBox = ({desc, tag_string, pid_user, getCmt}) => {
   return (

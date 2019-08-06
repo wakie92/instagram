@@ -16,7 +16,7 @@ const initialState = {
 const Post = handleActions(
   {
     [GET_POST_CMT]: (state, action) => {
-      const { post_cmt, post_rep } = action.payload;
+      const { post_cmt } = action.payload;
       return produce(state, draft => {
         if (post_cmt.code) {
           draft.post_cmt = [];

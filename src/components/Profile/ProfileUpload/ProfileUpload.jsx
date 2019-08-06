@@ -1,7 +1,6 @@
 import React, {useState, useRef} from 'react';
 import classes from './ProfileUpload.module.scss'
 import { getItem } from '../../../common/StorageUtils';
-import {updatePfImg} from 'api/axios-api';
 import Fetch from '../../../common/Fetch';
 
 const ProfileUpload = () => {

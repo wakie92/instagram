@@ -1,35 +1,43 @@
-import React , { useEffect, useState } from 'react';
-import App from './components/App';
+import React , { useEffect, useState , useCallback} from 'react';
+import { Route } from "react-router-dom";
 import { BrowserRouter} from 'react-router-dom'
 import { Provider } from 'react-redux';
+import Cookies from 'universal-cookie';
+import App from './components/App';
 import RestAPI from './common/RestAPI';
-import { Route } from "react-router-dom";
-import { Home } from "pages";
+import { Home, Login } from "pages";
 import configure from 'store/configureStore';
 function Root() {
-  const [isLoaded, setIsLoaded]  = useState(false);
-  const [isLogged, setIsLogged] = useState(false);
+  const cookies = new Cookies();
+  const [isLogged, setIsLogged] = useState(null)
 
-  useEffect(() => {
-    getRestAPI();
-  },[])
-
-  useEffect(() => {
-    const isLogged = sessionStorage.getItem('userData');
-    setIsLoaded(isLogged);
-    if(isLogged) {
-      return <Route exact path = '/main' component = {Home}/>;
+  const checkLogged = useCallback(() => {
+    if(cookies.get('userData')) {
+      setIsLogged(true);
+      console.log(isLogged);
+    } else {
+      setIsLogged(false);
+      console.log(isLogged)
+      return <Route exact path = '/login' component = {Login}/>
     }
-  },[isLogged]);
-
+  },[cookies,isLogged])
+  
+  
   const getRestAPI = async () => {
     const res = await RestAPI();
     console.log('res', res);
     if (!res) return null;
-
-    setIsLoaded(false);
   }
   const store = configure();
+
+  useEffect(() => {
+    checkLogged();
+  },[checkLogged])
+
+  useEffect(() => { 
+    getRestAPI();
+  })
+  
   return (
     <Provider store = {store}>
       <BrowserRouter>
