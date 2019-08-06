@@ -12,7 +12,7 @@
 /build
 
 /src/aws-config.json
-test.js
+/test
 # misc
 .DS_Store
 .env.local
