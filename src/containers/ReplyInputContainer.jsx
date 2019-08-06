@@ -8,12 +8,16 @@ import * as likeAndReplyAction from "store/modules/like_reply";
 import * as postActions from "store/modules/post";
 
 class ReplyContainer extends Component {
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.postCmt !== nextProps.postCmt;
+  }
   handleReply = e => {
     const { value } = e.target;
     const { LikeAndReplyAction } = this.props;
     LikeAndReplyAction.updateReply(value);
   };
-
+  
   handleInsert = async e => {
     try {
       const api = getItem("RestAPI").post_cmt_insert;
@@ -42,6 +46,7 @@ class ReplyContainer extends Component {
     const { NavBar, postCmt, history } = this.props;
     const { handleReply, handleInsert } = this;
     return (
+      <>
       <Reply
         history={history}
         postCmt={postCmt.post_cmt}
@@ -49,6 +54,7 @@ class ReplyContainer extends Component {
         handleReply={handleReply}
         handleInsert={handleInsert}
       />
+      </>
     );
   }
 }

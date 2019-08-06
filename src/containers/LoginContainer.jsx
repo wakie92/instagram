@@ -23,6 +23,11 @@ class LoginContainer extends Component {
     }))
   }
 
+  handlePassword = (e) => {
+    const { value } = e.target;
+    this.setState({password : value})
+  }
+
   handleSubmit = async (e) => {
     const { email, password } = this.state;
     e.preventDefault();

@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './ReplyInput.module.scss';
 import Button from '../../UI/Button/Button';
 
-const ReplyInput = ({handleReply, handleInsert}) => {
+const ReplyInput =({handleReply, handleInsert}) => {
 
   return(
     <div className = {classes.ReplyInputContainer}>

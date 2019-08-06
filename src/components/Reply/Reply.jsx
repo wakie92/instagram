@@ -1,12 +1,9 @@
 import React from "react";
 import classes from './Reply.module.scss'
-import ReplyOnTop from "./ReplyOnTop";
 import Replies from "./Replies";
 import ReplyInput from "./ReplyInput";
 
-
 const RepliesBox = ({postCmt}) => {
-  console.log(postCmt);
   let cmtData = null;
   if(!postCmt) {
     return (<div>잘못된 경로</div>);
@@ -33,7 +30,7 @@ const RepliesBox = ({postCmt}) => {
 const Reply = ({ NavBar, postCmt ,handleReply, handleInsert}) => {
   return (
     <>
-      <ReplyOnTop />
+      {/* <ReplyOnTop /> */}
       <div className = {classes.Container}>
         <div className = {classes.Replies}>
           <RepliesBox postCmt = {postCmt}/>
