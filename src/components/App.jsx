@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import { Home, Login, Register, Main, Searching, Reply, Upload, Profile } from "pages";
+import { Home, Login, Register, Main, Searching, Upload, Profile, Follow } from "pages";
 class App extends Component {
   render() {
     return (
@@ -11,7 +11,7 @@ class App extends Component {
           <Route exact path="/register" component={Register} />
           <Route exact path="/main" component={Main} />
           <Route exact path="/search" component={Searching} />
-          <Route exact path="/reply" component={Reply} />
+          <Route exact path="/follow" component={Follow} />
           <Route exact path="/upload" component={Upload} />
           <Route exact path="/profile" component={Profile} />
         </Switch>

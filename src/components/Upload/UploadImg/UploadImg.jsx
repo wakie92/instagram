@@ -1,6 +1,6 @@
 import React, {useState, useRef, useCallback} from 'react'
 import classes from './UploadImg.module.scss'
-import { Xmark } from 'libs/images';
+import img from 'libs/images';
 const UploadImg  = () => {
 
   const [files, setFiles] = useState()
@@ -44,7 +44,7 @@ const UploadImg  = () => {
           files 
           ? <>
               <img alt = "profile"  src = {files}/>
-              <img onClick = {removeImg} className = {classes.Xmark} alt = "xmark " src = {Xmark}/>
+              <img onClick = {removeImg} className = {classes.Xmark} alt = "xmark " src = {img.Xmark}/>
             </>
           : null 
         }

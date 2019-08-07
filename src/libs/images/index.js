@@ -1,19 +1,24 @@
-export { default as Activity } from "./activity.png";
-export { default as LogoImg } from "./logo.png";
-export { default as Avatar } from "./avatar.svg";
-export { default as Comments } from "./comments.svg";
-export { default as Home } from "./home.png";
-export { default as Like } from "./like.svg";
-export { default as AddPhoto } from "./photo.png";
-export { default as Pin } from "./pin.png";
-export { default as Profile } from "./profile.png";
-export { default as Sample } from "./sample.jpeg";
-export { default as Search } from "./search.png";
-export { default as HashIcon } from "./hash.svg";
-export { default as Back } from "./back.svg";
-export { default as Xmark } from "./xmark.svg";
-export { default as APhoto } from "./Aphoto.svg";
-export { default as AProfile } from "./Aprofile.svg";
-export { default as ASearch } from "./Asearch.svg";
-export { default as AHome } from "./Ahome.svg";
-export { default as Unlike } from "./unlike.svg";
+
+const images = {
+Activity : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/activity.png",
+LogoImg :  "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/logo.png",
+Avatar : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/avatar.svg",
+Comments : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/comments.svg",
+Home : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/home.png",
+Like : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/like.svg",
+AddPhoto : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/photo.png",
+Pin : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/pin.png",
+Profile : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/profile.png",
+Sample : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/sample.jpeg",
+Search : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/search.png",
+HashIcon :"https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/hash.svg",
+Back : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/back.svg",
+Xmark : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/xmark.svg",
+APhoto : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/Aphoto.svg",
+AProfile : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/Aprofile.svg",
+ASearch : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/Asearch.svg",
+AHome :"https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/Ahome.svg",
+Unlike : "https://elasticbeanstalk-ap-northeast-2-938727218762.s3.ap-northeast-2.amazonaws.com/instaImages/unlike.svg",
+
+}
+export default images 

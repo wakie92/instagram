@@ -6,3 +6,4 @@ export { default as Searching } from './searching';
 export { default as Reply } from './reply';
 export { default as Upload } from './upload'
 export { default as Profile } from './profile'
+export { default as Follow } from './follow'

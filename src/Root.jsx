@@ -1,6 +1,6 @@
 import React , { useEffect, useState , useCallback} from 'react';
 import { Route } from "react-router-dom";
-import { BrowserRouter} from 'react-router-dom'
+import { HashRouter} from 'react-router-dom'
 import { Provider } from 'react-redux';
 import Cookies from 'universal-cookie';
 import App from './components/App';
@@ -38,9 +38,9 @@ function Root() {
   
   return (
     <Provider store = {store}>
-      <BrowserRouter>
+      <HashRouter>
         <App/>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }

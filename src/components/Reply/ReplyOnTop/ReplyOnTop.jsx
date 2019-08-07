@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from './ReplyOnTop.module.scss'
-import { Back } from 'libs/images';
+import img from 'libs/images';
 
 const ReplyOnTop = () => {
   return (
     <div className = {classes.ReplyOnTop}>
-      <img alt = "Back" src = {Back} style = {{marginLeft : '16px'}}/>
+      <img alt = "Back" src = {img.Back} style = {{marginLeft : '16px'}}/>
       <span>Reply</span>
-      <img alt = "Back" src = {Back} style = {{visibility:'hidden', marginRight : '16px'}}/>
+      <img alt = "Back" src = {img.Back} style = {{visibility:'hidden', marginRight : '16px'}}/>
     </div>
   )
 }

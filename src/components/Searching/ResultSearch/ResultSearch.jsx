@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./ResultSearch.module.scss";
-import { HashIcon } from 'libs/images';
+import img from 'libs/images';
 
 const sampleData = [
   { data: "#lamborghini", post: 380384 },
@@ -15,7 +15,7 @@ const ResultSearch = () => {
   const results = sampleData.map(data => {
     return (
       <div className = {classes.Result}>
-        <img alt= "hash" src = {HashIcon}/>
+        <img alt= "hash" src = {img.HashIcon}/>
         <div className = {classes.SpanBox}>
           <span className = {classes.Data}>{data.data}</span>
           <span className = {classes.Post}>{data.post} posts</span>

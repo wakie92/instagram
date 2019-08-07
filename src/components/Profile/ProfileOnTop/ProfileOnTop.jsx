@@ -1,12 +1,12 @@
 import React from 'react'
 import classes from './ProfileOnTop.module.scss'
-import { Back } from 'libs/images'
+import img from 'libs/images'
 const ProfileOnTop = () => {
   return(
     <div className = {classes.ProfileOnTop}>
-      <img alt = "Back" src = {Back} style = {{marginLeft : '16px'}}/>
+      <img alt = "Back" src = {img.Back} style = {{marginLeft : '16px'}}/>
       <span>Profile</span>
-      <span src = {Back} style = {{color :'#4a90e2', marginRight : '16px'}}>Done</span>
+      <span src = {img.Back} style = {{color :'#4a90e2', marginRight : '16px'}}>Done</span>
     </div>
   )
 }
