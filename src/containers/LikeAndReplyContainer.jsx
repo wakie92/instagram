@@ -19,7 +19,6 @@ class LikeAndReplyContainer extends Component {
         pid_log_like: this.state.idLike
       }
     };
-    console.log(bodyData)
     try {
       await Fetch(api.log_like_delete, "",  bodyData);
       await this.setState({idLike : null});

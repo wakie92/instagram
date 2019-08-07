@@ -14,10 +14,8 @@ function Root() {
   const checkLogged = useCallback(() => {
     if(cookies.get('userData')) {
       setIsLogged(true);
-      console.log(isLogged);
     } else {
       setIsLogged(false);
-      console.log(isLogged)
       return <Route exact path = '/login' component = {Login}/>
     }
   },[cookies,isLogged])

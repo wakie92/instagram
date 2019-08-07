@@ -35,13 +35,11 @@ const Post = handleActions(
     },
     [UPDATE_POST_CMT]: (state, action) => {
       return produce(state, draft => {
-        if (draft.post_cmt !== null) {
-          console.log(draft.post_cmt, action.payload);
-          draft.post_cmt = action.payload;
-        }
+        draft.post_cmt.post_cmt.push(action.payload)
       });
     }
   },
   initialState
 );
+
 export default Post;

@@ -41,7 +41,6 @@ class RegisterContainer extends Component {
           password,
         }
       };
-      console.log(bodyData);
       const res = await this.userManager.signUp(bodyData);
       console.log('회원가입 응답 값', res);
     } catch (e) {

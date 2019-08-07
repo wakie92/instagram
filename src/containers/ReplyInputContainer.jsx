@@ -1,17 +1,14 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import Reply from "components/Reply";
+import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import ReplyInput from 'components/Reply/ReplyInput'
 import { getItem } from "common/StorageUtils";
 import Fetch from "common/Fetch";
 import * as likeAndReplyAction from "store/modules/like_reply";
 import * as postActions from "store/modules/post";
 
-class ReplyContainer extends Component {
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.props.postCmt !== nextProps.postCmt;
-  }
+class ReplyInputContainer extends Component {
+ 
   handleReply = e => {
     const { value } = e.target;
     const { LikeAndReplyAction } = this.props;
@@ -22,7 +19,7 @@ class ReplyContainer extends Component {
     try {
       const api = getItem("RestAPI").post_cmt_insert;
       const { pid_user, user_name } = getItem("userData").user;
-      const { reply, curPost, LikeAndReplyAction, PostActions } = this.props;
+      const { reply, curPost, LikeAndReplyAction,  PostActions } = this.props;
       const body = {
         post_cmt: {
           pid_user: pid_user,
@@ -35,37 +32,27 @@ class ReplyContainer extends Component {
       const res = await Fetch(api, "", body);
       if (res) {
         PostActions.updatePostCmt(body.post_cmt);
-        LikeAndReplyAction.updateReply(null);
+        LikeAndReplyAction.updateReply('');
       }
     } catch (error) {
       console.log(error);
     }
   };
-
   render() {
-    const { NavBar, postCmt, history } = this.props;
-    const { handleReply, handleInsert } = this;
+    const { handleInsert, handleReply } = this;
     return (
-      <>
-      <Reply
-        history={history}
-        postCmt={postCmt.post_cmt}
-        NavBar={NavBar}
-        handleReply={handleReply}
-        handleInsert={handleInsert}
-      />
-      </>
-    );
+      <ReplyInput reply = {this.props.reply} handleReply = {handleReply} handleInsert = {handleInsert}/>
+    )
   }
 }
 export default connect(
-  ({ Post, Like_Reply }) => ({
+  ({Post, Like_Reply}) => ({
     postCmt: Post.post_cmt,
-    reply: Like_Reply.reply,
-    curPost: Post.cur_post
+    reply : Like_Reply.reply,
+    curPost : Post.cur_post
   }),
   dispatch => ({
     LikeAndReplyAction: bindActionCreators(likeAndReplyAction, dispatch),
     PostActions: bindActionCreators(postActions, dispatch)
   })
-)(ReplyContainer);
+)(ReplyInputContainer);

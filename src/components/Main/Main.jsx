@@ -3,7 +3,6 @@ import classes from "./Main.module.scss";
 import MainContent from "./MainContent";
 
 const PostList = ({ postList, history }) => {
-  console.log(postList);
   const posts = postList.map((post, idx) => {
     return (
       <MainContent

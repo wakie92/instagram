@@ -9,7 +9,7 @@ export const updateReply = createAction(UPDATE_REPLY);
 
 const initialState = {
   idLike : null,
-  reply : null,
+  reply : ' ',
 }
 
 const Like_Reply = handleActions({

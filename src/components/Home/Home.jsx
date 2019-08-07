@@ -9,7 +9,6 @@ const Home = ({ children , matchData, history}) => {
   useEffect(() => {
     const isLogged = sessionStorage.getItem('userData')
     setIsLogged(isLogged);
-    console.log(isLogged)
     if(isLogged) {
       history.push('/main');
     }

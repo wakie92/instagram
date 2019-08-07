@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './ReplyInput.module.scss';
 import Button from '../../UI/Button/Button';
 
-const ReplyInput =({handleReply, handleInsert}) => {
+const ReplyInput =({handleReply,reply, handleInsert}) => {
 
   return(
     <div className = {classes.ReplyInputContainer}>
@@ -10,6 +10,7 @@ const ReplyInput =({handleReply, handleInsert}) => {
         name = "reply"
         placeholder = "text here"
         onChange = {handleReply}
+        value = {reply}
         className = {classes.ReplyInput}
       />
       <Button btnType = "Reply" value = "send" onclick = {handleInsert}/>

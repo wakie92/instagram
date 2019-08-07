@@ -2,6 +2,7 @@ import React from "react";
 import classes from './Reply.module.scss'
 import Replies from "./Replies";
 import ReplyInput from "./ReplyInput";
+import ReplyInputContainer from "../../containers/ReplyInputContainer";
 
 const RepliesBox = ({postCmt}) => {
   let cmtData = null;
@@ -27,15 +28,14 @@ const RepliesBox = ({postCmt}) => {
   )
 }
 
-const Reply = ({ NavBar, postCmt ,handleReply, handleInsert}) => {
+const Reply = ({ NavBar, postCmt }) => {
   return (
     <>
-      {/* <ReplyOnTop /> */}
       <div className = {classes.Container}>
         <div className = {classes.Replies}>
           <RepliesBox postCmt = {postCmt}/>
         </div>
-        <ReplyInput handleReply = {handleReply} handleInsert = {handleInsert}/>
+        <ReplyInputContainer/> 
       </div>
       {NavBar}
     </>

@@ -11,7 +11,6 @@ const UploadImg  = () => {
     const reader = new FileReader();
     //왜 밑에코드가 없으면 이미지가 생성이안되는지.
     const url = reader.readAsDataURL(file);
-    console.log(url)
     reader.onloadend = (e) => {
       setFiles(reader.result)
     }
