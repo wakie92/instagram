@@ -11,6 +11,7 @@ const ReplyInput =({handleReply,reply, handleInsert}) => {
         placeholder = "text here"
         onChange = {handleReply}
         value = {reply}
+        autoComplete="off"
         className = {classes.ReplyInput}
       />
       <Button btnType = "Reply" value = "send" onclick = {handleInsert}/>
