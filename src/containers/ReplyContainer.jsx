@@ -23,5 +23,8 @@ class ReplyContainer extends Component {
 export default connect(
   ({ Post }) => ({
     postCmt: Post.post_cmt,
+  }),
+  (dispatch) => ({
+    
   })
 )(ReplyContainer);

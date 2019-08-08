@@ -8,12 +8,18 @@ import Fetch from "common/Fetch";
 export class FollowContainer extends Component {
 
 
-  getFollowData = () => {
-    const api = getItem("RestAPI");
-    const user = getItem("userData").user.pid_user;
-    
-    const res = Fetch(api.follow_get_my,'')
-    console.log(res);
+  getFollowData = async () => {
+
+    try {
+      const api = getItem("RestAPI");
+      const user = getItem("userData").user.pid_user;
+      
+      const res = await Fetch(api.follow_get_my,'')
+      console.log(res);
+      //follow data 불러오기 성공
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   componentDidMount() {
@@ -29,4 +35,7 @@ export class FollowContainer extends Component {
   }
 }
 
-export default FollowContainer
+export default connect(
+  ({Post}) => ({
+    
+  }))(FollowContainer)
